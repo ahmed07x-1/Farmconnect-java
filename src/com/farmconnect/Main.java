@@ -9,128 +9,150 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         FarmConnectSystem system = new FarmConnectSystem();
 
-        while(true) {
+        while (true) {
 
-        	System.out.println("1 Add Product");
-        	System.out.println("2 Update Product");
-        	System.out.println("3 Delete Product");
-        	System.out.println("4 View Products");
-        	System.out.println("5 View Orders");
+            System.out.println("\n===== Main Menu =====");
+            System.out.println("1 Farmer");
+            System.out.println("2 Buyer");
+            System.out.println("3 Exit");
 
             int role = sc.nextInt();
 
-            switch(role) {
+            switch (role) {
 
-            
+            // FARMER
             case 1:
 
-            	while(true) {
+                while (true) {
 
-            	System.out.println("----- Farmer Menu -----");
-            	System.out.println("1 Add Product");
-            	System.out.println("2 Update Product");
-            	System.out.println("3 Delete Product");
-            	System.out.println("4 View Products");
-            	System.out.println("5 View Orders");
-            	System.out.println("6 Back");
+                    System.out.println("\n----- Farmer Menu -----");
+                    System.out.println("1 Add Product");
+                    System.out.println("2 Update Product");
+                    System.out.println("3 Delete Product");
+                    System.out.println("4 View Products");
+                    System.out.println("5 View Orders");
+                    System.out.println("6 Back");
 
-            	int f = sc.nextInt();
+                    int f = sc.nextInt();
 
-            	if(f == 1) {
+                    if (f == 1) {
 
-            	    System.out.println("Enter ID:");
-            	    int id = sc.nextInt();
+                        System.out.println("Enter ID:");
+                        int id = sc.nextInt();
 
-            	    System.out.println("Enter Name:");
-            	    String name = sc.next();
+                        System.out.println("Enter Name:");
+                        String name = sc.next();
 
-            	    System.out.println("Enter Price:");
-            	    double price = sc.nextDouble();
+                        System.out.println("Enter Price:");
+                        double price = sc.nextDouble();
 
-            	    System.out.println("Enter Quantity:");
-            	    int qty = sc.nextInt();
+                        System.out.println("Enter Quantity:");
+                        int qty = sc.nextInt();
 
-            	    Product p = new Product(id,name,price,qty);
-            	    system.addProduct(p);
-            	}
+                        Product p = new Product(id, name, price, qty);
+                        system.addProduct(p);
+                    }
 
-            	else if(f == 2) {
+                    else if (f == 2) {
 
-            	    System.out.println("Enter Product ID:");
-            	    int id = sc.nextInt();
+                        System.out.println("Enter Product ID:");
+                        int id = sc.nextInt();
 
-            	    System.out.println("Enter New Price:");
-            	    double price = sc.nextDouble();
+                        System.out.println("Enter New Price:");
+                        double price = sc.nextDouble();
 
-            	    System.out.println("Enter New Quantity:");
-            	    int qty = sc.nextInt();
+                        System.out.println("Enter New Quantity:");
+                        int qty = sc.nextInt();
 
-            	    system.updateProduct(id,price,qty);
-            	}
+                        system.updateProduct(id, price, qty);
+                    }
 
-            	else if(f == 3) {
+                    else if (f == 3) {
 
-            	    System.out.println("Enter Product ID:");
-            	    int id = sc.nextInt();
+                        System.out.println("Enter Product ID:");
+                        int id = sc.nextInt();
 
-            	    system.deleteProduct(id);
-            	}
+                        system.deleteProduct(id);
+                    }
 
-            	else if(f == 4) {
+                    else if (f == 4) {
 
-            	    system.viewProducts();
-            	}
+                        system.viewProducts();
+                    }
 
-            	else if(f == 5) {
+                    else if (f == 5) {
 
-            	    system.viewOrders();
-            	}
+                        system.viewOrders();
+                    }
 
-            	else if(f == 6) {
+                    else if (f == 6) {
 
-            	    break;
-            	}
+                        break;
+                    }
 
-            	}
+                    else {
 
-            	break;
-
-                
-
-            case 2:
-
-                System.out.println("1 View Products");
-                System.out.println("2 Place Order");
-
-                int b = sc.nextInt();
-
-                if(b == 1) {
-
-                    system.viewProducts();
-                }
-
-                else if(b == 2) {
-
-                    System.out.println("Enter Order ID:");
-                    int id = sc.nextInt();
-
-                    System.out.println("Enter Product Name:");
-                    String name = sc.next();
-
-                    System.out.println("Enter Quantity:");
-                    int qty = sc.nextInt();
-
-                    Order o = new Order(id,name,qty);
-
-                    system.placeOrder(o);
+                        System.out.println("Invalid Choice!");
+                    }
                 }
 
                 break;
 
+            // BUYER
+            case 2:
+
+                while (true) {
+
+                    System.out.println("\n----- Buyer Menu -----");
+                    System.out.println("1 View Products");
+                    System.out.println("2 Place Order");
+                    System.out.println("3 Back");
+
+                    int b = sc.nextInt();
+
+                    if (b == 1) {
+
+                        system.viewProducts();
+                    }
+
+                    else if (b == 2) {
+
+                        System.out.println("Enter Order ID:");
+                        int id = sc.nextInt();
+
+                        System.out.println("Enter Product Name:");
+                        String name = sc.next();
+
+                        System.out.println("Enter Quantity:");
+                        int qty = sc.nextInt();
+
+                        Order o = new Order(id, name, qty);
+
+                        system.placeOrder(o);
+                    }
+
+                    else if (b == 3) {
+
+                        break;
+                    }
+
+                    else {
+
+                        System.out.println("Invalid Choice!");
+                    }
+                }
+
+                break;
+
+            // EXIT
             case 3:
 
-                System.out.println("Thank you!");
+                System.out.println("Thank you for using FarmConnect!");
                 System.exit(0);
+
+            default:
+
+                System.out.println("Invalid Choice!");
             }
         }
     }
