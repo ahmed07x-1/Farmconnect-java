@@ -187,12 +187,17 @@ git clone https://github.com/ahmed07x-1/Farmconnect-java.git
 
 **Mohd Younus Ahmed**
 
-Cybersecurity Student | Java Developer  
+Cybersecurity Student | Java Developer | Backend Developer | Aspiring Full Stack Developer
 
-GitHub:  
+📚 Currently focusing on:
+
+* Java Development
+* Object-Oriented Programming (OOP)
+* Backend Development
+* Cybersecurity
+
+🔗 GitHub
 https://github.com/ahmed07x-1
-
----
 
 ⭐ If you like this project, consider starring the repository.
 
