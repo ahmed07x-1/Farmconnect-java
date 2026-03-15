@@ -183,6 +183,18 @@ git clone https://github.com/ahmed07x-1/Farmconnect-java.git
 
 ---
 
+---
+
+## 📊 Project Presentation
+
+A detailed explanation of the **FarmConnect system**, including architecture, features, and workflow, is available in the project presentation.
+
+📎 **View the presentation:** [FarmConnect Project Presentation](FarmConnect_Presentation.pdf)
+
+
+---
+
+
 ## 👨‍💻 Author
 
 **Mohd Younus Ahmed**
